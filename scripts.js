@@ -1,4 +1,5 @@
 const produto = document.getElementById('valor');
+const imposto = document.getElementById('imposto');
 const frete = document.getElementById('frete');
 const total = document.getElementById('total');
 const botao25 = document.getElementById('botao25');
@@ -40,18 +41,23 @@ function alterarLucro(valorLucro) {
 
 function calcular() {
     console.log("Produto: " + produto.value);
+    console.log("Imposto: " + imposto.value)
     console.log("Frete: " + frete.value);
     console.log("Lucro: " + lucro);
-    if (produto.value == "") {
+    if (produto.value == "" || parseFloat(produto.value) < 0) {
         produto.value = 0;
     }
 
-    if (frete.value == "") {
+    if (imposto.value == "" || parseFloat(imposto.value) < 0) {
+        imposto.value = 0;
+    }
+
+    if (frete.value == "" || parseFloat(frete.value) < 0) {
         frete.value = 0;
     }
 
     var soma = parseFloat(produto.value);
-    soma += 11 * (produto.value / 100);
+    soma += parseFloat(imposto.value) * (produto.value / 100);
     soma += parseFloat(frete.value);
     soma += lucro * (soma / 100);
 
