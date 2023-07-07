@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #00008b;
+}
+
+body {
+    background-color: #141414;
+    background-image: url(https://wallpaperaccess.com/full/2454628.png);
+    height: 100vh;
+    max-height: 100vh;
+}
+
+header {
+    padding: 1rem;
+}
+
+header img {
+    height: 5rem;
+    -webkit-filter: drop-shadow(.1rem .1rem .1rem #ffffff);
+        filter: drop-shadow(.1rem .1rem .1rem #ffffff);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: #777;
+    box-shadow: .5rem .5rem .5rem #000;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+input {
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: #141414;
+    text-align: center;
+    transition: .5s;
+    border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    all: unset;
+    min-width: 21px;
+    min-height: 45px;
+    margin: 17px;
+    padding: 0px;
+    background-image:
+        linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, #000 35px, #000 36px, transparent 36px, transparent 40px),
+        linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+    transform: rotate(90deg) scale(0.8, 0.9);
+    cursor: pointer;
+
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container .icon {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #141414;
+}
+
+i {
+    color: #141414;
+    font-size: 2rem;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
