@@ -9,12 +9,15 @@
 a {
     text-decoration: none;
     font-weight: bolder;
-    color: #00008b;
 }
 
 body {
     background-color: #141414;
     background-image: url(https://wallpaperaccess.com/full/2454628.png);
+    background-position: right bottom;
+    /*Positioning*/
+    background-repeat: no-repeat;
+    /*Prevent showing multiple background images*/
     height: 100vh;
     max-height: 100vh;
 }
@@ -26,13 +29,14 @@ header {
 header img {
     height: 5rem;
     -webkit-filter: drop-shadow(.1rem .1rem .1rem #ffffff);
-        filter: drop-shadow(.1rem .1rem .1rem #ffffff);
+    filter: drop-shadow(.1rem .1rem .1rem #ffffff);
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 75vh;
 }
 
 #calculadora {
@@ -49,11 +53,13 @@ h2 {
     margin-bottom: 2rem;
 }
 
-input {
+input,
+button {
     margin-bottom: 1rem;
 }
 
-input {
+input,
+button {
     font-size: 2rem;
     padding: .5rem;
     border-radius: .5rem;
@@ -77,6 +83,25 @@ input[type=number]::-webkit-inner-spin-button {
 
 }
 
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+}
+
+.selected {
+    border: solid .1rem #000;
+    font-weight: bolder;
+    box-shadow: .1rem .1rem .1rem #141414;
+}
+
+button:hover {
+    border: solid .1rem #000;
+    font-weight: bolder;
+    box-shadow: .1rem .1rem .1rem #141414;
+}
+
+
 .input-container {
     position: relative;
 }
@@ -93,13 +118,24 @@ input[type=number]::-webkit-inner-spin-button {
 i {
     color: #141414;
     font-size: 2rem;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+i:hover {
+    color: #505050;
 }
 
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
+    height: 2vh;
     width: 100%;
     padding: 1rem;
     text-align: center;
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
 }

@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <img src="assets/img/F5-blue.png" alt="" srcset="">
+        <img src="assets/img/f5.png" alt="" srcset="">
     </header>
 
     <main>
@@ -29,10 +29,17 @@
             <input type="number" name="valor" id="valor" value="0.00" autofocus onchange="calcular()">
             <label for="frete">Valor do Frete</label>
             <input type="number" name="frete" id="frete" value="0.00" onchange="calcular()">
+            <label for="lucro">Margem de lucro</label>
+            <div class="botoes">
+                <button onclick="alterarLucro(25)" id="botao25">25</button>
+                <button onclick="alterarLucro(30)" id="botao30">30</button>
+                <button onclick="alterarLucro(35)" id="botao35">35</button>
+                <button onclick="alterarLucro(40)" id="botao40">40</button>
+            </div>
             <label for="total">Valor total</label>
             <div class="input-container">
                 <input type="text" name="total" id="total" value="0.00" readonly>
-                <span class="icon" onclick="copiarValor()"><i class="fa-solid fa-copy"></i></span>
+                <span class="icon" onclick="copiarValor()"><i class="fa-solid fa-copy" alt="Copiar valor"></i></span>
             </div>
         </div>
     </main>
